@@ -1,0 +1,14 @@
+{
+	"windowPosition": [
+		964,
+		40
+	],
+	"windowSize": [
+		948,
+		944
+	],
+	"hyper": {
+		"plugins": "{\"plugins\":[\"hyper-material-theme\",\"hypercwd\",\"hyper-highlight-active-pane\",\"hyper-active-tab\",\"hyper-tabs-enhanced\",\"hyper-pane\",\"hyper-init\"],\"localPlugins\":[]}",
+		"plugin-versions": "[[\"hyper-material-theme\",\"3.0.1\"],[\"hypercwd\",\"1.4.0\"],[\"hyper-highlight-active-pane\",\"0.1.0\"],[\"hyper-active-tab\",\"0.0.2\"],[\"hyper-tabs-enhanced\",\"0.4.2\"],[\"hyper-pane\",\"2.1.5\"],[\"hyper-init\",\"1.5.1\"]]"
+	}
+}

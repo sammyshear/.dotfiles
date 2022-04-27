@@ -1,0 +1,13 @@
+{
+  "index": {
+    "/home/sammyshear/.dotfiles/nvim/.config": true,
+    "/home/sammyshear/.dotfiles/nvim": true,
+    "/home": true,
+    "/home/sammyshear/.dotfiles": true,
+    "/home/sammyshear/.dotfiles/nvim/.config/nvim": true,
+    "/": true,
+    "/home/sammyshear": true
+  },
+  "show_hidden": false,
+  "enable_vc": true
+}
