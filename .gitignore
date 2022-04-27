@@ -1,0 +1,6 @@
+hyper/.config/Hyper/*
+!hyper/.config/Hyper/.hyper.js
+!hyper/.config/Hyper/config.json
+
+nvim/.local/share/nvim/*
+!nvim/.local/share/nvim/plugged
