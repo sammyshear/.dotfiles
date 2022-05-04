@@ -4,92 +4,121 @@
 // See https://hyper.is#cfg for all currently supported options.
 module.exports = {
     config: {
-    	MaterialTheme: {
-        	  // Set the theme variant,
-        	  // OPTIONS: 'Darker', 'Palenight', 'Ocean', ''
-        	  theme: 'Palenight',
+        summon: {
+            hotkey: "Alt+Super+O",
+        },
+        paneNavigation: {
+            debug: false,
+            hotkeys: {
 
-        	  // [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
-          	  // OPTIONS: From 0.1 to 1
-          	  backgroundOpacity: '1',
+                navigation: {
+                    up: "ctrl+alt+up",
+                    down: "ctrl+alt+down",
+                    left: "ctrl+alt+left",
+                    right: "ctrl+alt+right",
+                },
+                jump_prefix: "ctrl+alt", // completed with 1-9 digits
+                permutation_modifier: "shift", // Added to jump and navigation hotkeys for pane permutation
+                maximize: "meta+alt+enter",
+            },
+            showIndicators: true, // Show pane number
+            indicatorPrefix: "", // Will be completed with pane number
+            indicatorStyle: {
+                // Added to indicator <div>
+                position: "absolute",
+                top: 0,
+                left: 0,
+                fontSize: "10px",
+            },
+            focusOnMouseHover: true,
+            inactivePaneOpacity: 0.6, // Set to 1 to disable inactive panes dimming
+        },
+        MaterialTheme: {
+            // Set the theme variant,
+            // OPTIONS: 'Darker', 'Palenight', 'Ocean', ''
+            theme: "Palenight",
 
-          	  // [Optional] Set the accent color for the current active tab
-          	  accentColor: '#64FFDA',
+            // [Optional] Set the rgba() app background opacity, useful when enableVibrance is true
+            // OPTIONS: From 0.1 to 1
+            backgroundOpacity: "1",
 
-          	  // [Optional] Mac Only. Need restart. Enable the vibrance and blurred background
-          	  // OPTIONS: 'dark', 'ultra-dark', 'bright'
-          	  // NOTE: The backgroundOpacity should be between 0.1 and 0.9 to see the effect.
-          	  vibrancy: 'dark'
+            // [Optional] Set the accent color for the current active tab
+            accentColor: "#64FFDA",
+
+            // [Optional] Mac Only. Need restart. Enable the vibrance and blurred background
+            // OPTIONS: 'dark', 'ultra-dark', 'bright'
+            // NOTE: The backgroundOpacity should be between 0.1 and 0.9 to see the effect.
+            vibrancy: "dark",
         },
         // choose either `'stable'` for receiving highly polished,
         // or `'canary'` for less polished but more frequent updates
-        updateChannel: 'stable',
+        updateChannel: "stable",
         // default font size in pixels for all tabs
         fontSize: 13,
         // font family with optional fallbacks
-        fontFamily: 'MesloLGS NF',
+        fontFamily: "MesloLGS NF",
         // default font weight: 'normal' or 'bold'
-        fontWeight: 'normal',
+        fontWeight: "normal",
         // font weight for bold characters: 'normal' or 'bold'
-        fontWeightBold: 'bold',
+        fontWeightBold: "bold",
         // line height as a relative unit
         lineHeight: 1,
         // letter spacing as a relative unit
         letterSpacing: 0,
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-        cursorColor: 'rgba(248,28,229,0.8)',
+        cursorColor: "rgba(248,28,229,0.8)",
         // terminal text color under BLOCK cursor
-        cursorAccentColor: '#000',
+        cursorAccentColor: "#000",
         // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-        cursorShape: 'BLOCK',
+        cursorShape: "BLOCK",
         // set to `true` (without backticks and without quotes) for blinking cursor
         cursorBlink: false,
         // color of the text
-        foregroundColor: '#fff',
+        foregroundColor: "#fff",
         // terminal background color
         // opacity is only supported on macOS
-        backgroundColor: '#000',
+        backgroundColor: "#000",
         // terminal selection color
-        selectionColor: 'rgba(248,28,229,0.3)',
+        selectionColor: "rgba(248,28,229,0.3)",
         // border color (window, tabs)
-        borderColor: '#333',
+        borderColor: "#333",
         // custom CSS to embed in the main window
-        css: '',
+        css: "",
         // custom CSS to embed in the terminal window
-        termCSS: '',
+        termCSS: "",
         // set custom startup directory (must be an absolute path)
-        workingDirectory: '',
+        workingDirectory: "",
         // if you're using a Linux setup which show native menus, set to false
         // default: `true` on Linux, `true` on Windows, ignored on macOS
-        showHamburgerMenu: '',
+        showHamburgerMenu: "",
         // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
         // additionally, set to `'left'` if you want them on the left, like in Ubuntu
         // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
-        showWindowControls: '',
+        showWindowControls: "",
         // custom padding (CSS format, i.e.: `top right bottom left`)
-        padding: '12px 14px',
+        padding: "12px 14px",
         // the full list. if you're going to provide the full color palette,
         // including the 6 x 6 color cubes and the grayscale map, just provide
         // an array here instead of a color map object
         colors: {
-            black: '#000000',
-            red: '#C51E14',
-            green: '#1DC121',
-            yellow: '#C7C329',
-            blue: '#80cbc4',
-            magenta: '#C839C5',
-            cyan: '#20C5C6',
-            white: '#C7C7C7',
-            lightBlack: '#686868',
-            lightRed: '#FD6F6B',
-            lightGreen: '#67F86F',
-            lightYellow: '#FFFA72',
-            lightBlue: '#6A76FB',
-            lightMagenta: '#FD7CFC',
-            lightCyan: '#68FDFE',
-            lightWhite: '#FFFFFF',
-            limeGreen: '#32CD32',
-            lightCoral: '#F08080',
+            black: "#000000",
+            red: "#C51E14",
+            green: "#1DC121",
+            yellow: "#C7C329",
+            blue: "#80cbc4",
+            magenta: "#C839C5",
+            cyan: "#20C5C6",
+            white: "#C7C7C7",
+            lightBlack: "#686868",
+            lightRed: "#FD6F6B",
+            lightGreen: "#67F86F",
+            lightYellow: "#FFFA72",
+            lightBlue: "#6A76FB",
+            lightMagenta: "#FD7CFC",
+            lightCyan: "#68FDFE",
+            lightWhite: "#FFFFFF",
+            limeGreen: "#32CD32",
+            lightCoral: "#F08080",
         },
         // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
         // if left empty, your system's login shell will be used by default
@@ -109,16 +138,16 @@ module.exports = {
         //
         // Cygwin
         // - Example: `C:\\cygwin64\\bin\\bash.exe`
-        shell: '/usr/bin/zsh',
+        shell: "/usr/bin/zsh",
         // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
         // by default `['--login']` will be used
-        shellArgs: ['--login'],
+        shellArgs: ["--login"],
         // for environment variables
         env: {},
         // Supported Options:
         //  1. 'SOUND' -> Enables the bell as a sound
         //  2. false: turns off the bell
-        bell: 'SOUND',
+        bell: "SOUND",
         // An absolute file path to a sound file on the machine.
         // bellSoundURL: '/path/to/sound/file',
         // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
@@ -131,13 +160,13 @@ module.exports = {
         // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
         // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
         // (inside tmux or vim with mouse mode enabled for example).
-        macOptionSelectionMode: 'vertical',
+        macOptionSelectionMode: "vertical",
         // Whether to use the WebGL renderer. Set it to false to use canvas-based
         // rendering (slower, but supports transparent backgrounds)
         webGLRenderer: false,
         // keypress required for weblink activation: [ctrl|alt|meta|shift]
         // todo: does not pick up config changes automatically, need to restart terminal :/
-        webLinksActivationKey: '',
+        webLinksActivationKey: "",
         // if `false` (without backticks and without quotes), Hyper will use ligatures provided by some fonts
         disableLigatures: true,
         // set to true to disable auto updates
@@ -157,15 +186,16 @@ module.exports = {
         "hyper-active-tab",
         "hyper-tabs-enhanced",
         "hyper-pane",
-        "hyper-init"
+        "hyper-init",
+        "hyperterm-summon",
     ],
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
     // to load it and avoid it being `npm install`ed
     localPlugins: [],
     keymaps: {
-    // Example
-    // 'window:devtools': 'cmd+alt+o',
+        // Example
+        // 'window:devtools': 'cmd+alt+o',
     },
 };
 //# sourceMappingURL=config-default.js.map

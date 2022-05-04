@@ -6,7 +6,7 @@
 #fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/home/sammyshear/anaconda3/condabin:/home/sammyshear/.nvm/versions/node/v17.0.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sammyshear/.yarn/bin:/home/sammyshear/.vim:/home/sammyshear/.local/bin:/home/sammyshear/.cargo/bin:/home/sammyshear/.dotnet/tools:/home/sammyshear/bin:/home/sammyshear/.gem/ruby/1.9.1/bin:/home/sammyshear/.dotnet:/home/sammyshear/.local/share/gem/ruby/2.7.0/bin:/home/sammyshear/.vcpkg/vcpkg:/home/sammyshear/.gvm/gos/go1.18/bin
+export PATH=/home/sammyshear/anaconda3/condabin:/home/sammyshear/.nvm/versions/node/v17.0.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sammyshear/.yarn/bin:/home/sammyshear/.vim:/home/sammyshear/.local/bin:/home/sammyshear/.cargo/bin:/home/sammyshear/.dotnet/tools:/home/sammyshear/bin:/home/sammyshear/.gem/ruby/1.9.1/bin:/home/sammyshear/.dotnet:/home/sammyshear/.vcpkg/vcpkg:/home/sammyshear/.gvm/gos/go1.18/bin
 export EDITOR=nvim
 
 source ~/.zplug/init.zsh
@@ -144,4 +144,6 @@ export VCPKG_ROOT="/home/sammyshear/.vcpkg/vcpkg"
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/sammyshear/.emacs.d/bin
+
+source $(dirname $(gem which colorls))/tab_complete.sh
 eval "$(starship init zsh)"
