@@ -27,7 +27,6 @@ return require('packer').startup(function()
     use 'ellisonleao/glow.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'norcalli/nvim-colorizer.lua'
-    use 'neoclide/coc.nvim'
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
     use 'RishabhRD/nvim-lsputils'

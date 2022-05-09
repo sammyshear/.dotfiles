@@ -1,3 +1,4 @@
+set termguicolors
 lua require('init')
 
 " Get syntax files from config folder
@@ -271,5 +272,3 @@ nnoremap <f12> :FloatermNew zsh<CR>
 " NvimTreeResize
 " NvimTreeCollapse
 " NvimTreeCollapseKeepBuffers
-
-set termguicolors " this variable must be enabled for colors to be applied properly
