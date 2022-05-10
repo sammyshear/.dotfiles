@@ -19,6 +19,7 @@ return require('packer').startup(function()
     use 'Shirk/vim-gas'
     use 'ntpeters/vim-better-whitespace'
     use 'kyazdani42/nvim-web-devicons'
+    use 'neoclide/coc.nvim'
     use {
         'ms-jpq/chadtree',
         branch = 'chad'
