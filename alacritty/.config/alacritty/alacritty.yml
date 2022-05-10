@@ -324,8 +324,6 @@ bell:
 #   - AppKeypad
 #
 key_bindings:
-    - { key: V, mods: Control|Shift, action: Paste }
-    - { key: C, mods: Control|Shift, action: Copy }
     - { key: Q, mods: Control|Shift, chars: "\x06\x78" }
     - { key: T, mods: Control|Shift, chars: "\x06\x63" }
     - { key: W, mods: Control|Shift, chars: "\x06\x78" }
