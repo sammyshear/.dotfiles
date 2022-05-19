@@ -324,11 +324,15 @@ bell:
 #   - AppKeypad
 #
 key_bindings:
+    - { key: V, mods: Control|Shift, action: Paste }
+    - { key: C, mods: Control|Shift, action: Copy }
     - { key: Q, mods: Control|Shift, chars: "\x06\x78" }
     - { key: T, mods: Control|Shift, chars: "\x06\x63" }
     - { key: W, mods: Control|Shift, chars: "\x06\x78" }
-    - { key: V, mods: Control|Shift, chars: "\x06\x76" }
-    - { key: B, mods: Control|Shift, chars: "\x06\x73" }
+    - { key: F11, mods: Control, action: ToggleFullscreen }
+    - { key: D, mods: Control|Shift, chars: "\x06\x76" }
+    - { key: S, mods: Control|Shift, chars: "\x06\x73" }
+    - { key: Tab, mods: Control|Shift, chars: "\x06\x6E" }
 mouse:
     # Click settings
     #

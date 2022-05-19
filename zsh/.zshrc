@@ -111,7 +111,8 @@ zplug load
 
 alias lc="colorls"
 alias vim="nvim"
-alias ls="lc"
+#alias ls="lc"
+alias ls="ls --color=auto"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -145,5 +146,13 @@ export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/home/sammyshear/.emacs.d/bin
 
+export CLICOLOR=1
+export LS_COLORS="$(vivid generate nord)"
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' completer _extensions _complete _approximate
+zstyle ':completion:*' menu select
+
 source $(dirname $(gem which colorls))/tab_complete.sh
+autoload -U compinit; compinit
 eval "$(starship init zsh)"
+neofetch
