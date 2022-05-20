@@ -8,7 +8,11 @@ set $mod Mod4
 set $term alacritty
 # Your preferred application launcher
 set $menu wofi --show drun
-#set $menu nwggrid -f
+# Your preferred browser
+set $browser google-chrome-stable
+# Your laptop screen
+set $laptop eDP-1
+
 
 ### Gnome settings
 set $gnome-schema org.gnome.desktop.interface
@@ -22,15 +26,16 @@ exec_always {
 
 ### Idle configuration
 exec swayidle -w \
-          timeout 300 'swaylock -f' \
+          timeout 300 'swaylock -f -S --clock --indicator --effect-blur 7x5 --fade-in 0.2' \
           timeout 305 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f'
+          before-sleep 'swaylock -f -S --clock --indicator --effect-blur 7x5 --fade-in 0.2'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Autostart
 exec_always autotiling
+exec gnome-keyring-daemon -r -d --components=secrets
 xwayland enable
 
 ### Window config
@@ -51,6 +56,8 @@ gaps inner 10
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    bindsym $mod+Shift+e exec $browser
+
     # Filesearch
 
 
@@ -68,7 +75,7 @@ gaps inner 10
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'End session?' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+x exec swaynag -t warning -m 'End session?' -b 'Yes, exit sway' 'swaymsg exit'
 
 #
 # Multimedia keys
@@ -229,9 +236,25 @@ output * background /home/sammyshear/Pictures/wallpapers/wallpaper.png fill
 #output "*" background /home/nick/Pictures/Wallpapers/5cclxsyhree71.png fill
 #output "*" background /home/nick/Pictures/Wallpapers/tumblr_nvolmjO9yb1tff08ro1_1280.jpg fill
 #output "*" background /home/nick/Pictures/Wallpapers/O0mu0E8.jpeg fill
+
+# Outputs for VM
 #output Virtual-1 resolution 1920x1080 position 1920,0
 #output Virtual-2 resolution 1920x1080 position 0,0
-#output "*" background $wallpaper fill
+
+
+# Display for laptop
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
+### Inputs
+input "1267:12598:ELAN0B00:00_04F3:3136_Touchpad" {
+    natural_scroll enabled
+    tap enabled
+    click_method button_areas
+    middle_emulation enabled
+    accel_profile "flat"
+    pointer_accel 0.25
+}
 
 # class                     border      backgr.     text        indicator   child_border
 #    client.focused          $foreground $background $color6     $foreground $foreground
