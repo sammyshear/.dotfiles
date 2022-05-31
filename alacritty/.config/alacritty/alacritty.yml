@@ -90,7 +90,7 @@ font:
         # style: "Medium Italic"
 
     # Point size of the font
-    size: 14.0
+    size: 12.0
 
     # Offset is the extra space around each character. offset.y can be thought of
     # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -333,6 +333,10 @@ key_bindings:
     - { key: D, mods: Control|Shift, chars: "\x06\x76" }
     - { key: S, mods: Control|Shift, chars: "\x06\x73" }
     - { key: Tab, mods: Control|Shift, chars: "\x06\x6E" }
+    - { key: P, mods: Control|Shift, chars: "\x17\x76" }
+    - { Key: O, mods: Control|Shift, chars: "\x17\x73" }
+    - { Key: I, mods: Control|Shift, chars: "\x17\x63" }
+    - { Key: U, mods: Control|Shift, chars: "\x17\x6F" }
 mouse:
     # Click settings
     #

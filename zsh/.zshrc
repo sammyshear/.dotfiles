@@ -6,7 +6,7 @@
 #fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH=/home/sammyshear/anaconda3/condabin:/home/sammyshear/.nvm/versions/node/v17.0.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sammyshear/.yarn/bin:/home/sammyshear/.vim:/home/sammyshear/.local/bin:/home/sammyshear/.cargo/bin:/home/sammyshear/.dotnet/tools:/home/sammyshear/bin:/home/sammyshear/.gem/ruby/1.9.1/bin:/home/sammyshear/.dotnet:/home/sammyshear/.vcpkg/vcpkg:/home/sammyshear/.gvm/gos/go1.18/bin:/home/sammyshear/.local/bin/eww
+export PATH=/home/sammyshear/anaconda3/condabin:/home/sammyshear/.nvm/versions/node/v17.0.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sammyshear/.yarn/bin:/home/sammyshear/.vim:/home/sammyshear/.local/bin:/home/sammyshear/.cargo/bin:/home/sammyshear/.dotnet/tools:/home/sammyshear/bin:/home/sammyshear/.gem/ruby/1.9.1/bin:/home/sammyshear/.dotnet:/home/sammyshear/.vcpkg/vcpkg:/home/sammyshear/.gvm/gos/go1.18/bin:/home/sammyshear/.local/bin/eww:/home/sammyshear/una
 export EDITOR=nvim
 
 source ~/.zplug/init.zsh
@@ -155,4 +155,4 @@ zstyle ':completion:*' menu select
 source $(dirname $(gem which colorls))/tab_complete.sh
 autoload -U compinit; compinit
 eval "$(starship init zsh)"
-neofetch
+pfetch

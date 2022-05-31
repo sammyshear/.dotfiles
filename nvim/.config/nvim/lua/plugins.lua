@@ -19,7 +19,7 @@ return require('packer').startup(function()
     use 'Shirk/vim-gas'
     use 'ntpeters/vim-better-whitespace'
     use 'kyazdani42/nvim-web-devicons'
-    use 'neoclide/coc.nvim'
+    --use 'neoclide/coc.nvim'
     use {
         'ms-jpq/chadtree',
         branch = 'chad'
@@ -31,5 +31,6 @@ return require('packer').startup(function()
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
     use 'RishabhRD/nvim-lsputils'
+    --use 'lukas-reineke/lsp-format.nvim'
 end)
 
