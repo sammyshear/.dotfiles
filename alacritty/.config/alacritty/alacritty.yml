@@ -147,8 +147,8 @@ colors:
         yellow: "0xdab158"
         blue: "0x44848b"
         magenta: "0xc792ea"
-        cyan: "0x89ddff"
-        white: "0xd0d0d0"
+        cyan: "0x44848b"
+        white: "0x44848b"
 
     # Bright colors
     bright:
@@ -158,8 +158,8 @@ colors:
         yellow: "0xdab158"
         blue: "0x44848b"
         magenta: "0xe1acff"
-        cyan: "0xa3f7ff"
-        white: "0xffffff"
+        cyan: "0x44848b"
+        white: "0x44848b"
 
     # # Tomorrow Night (https://github.com/aarowill/base16-alacritty/blob/master/colors/base16-tomorrow-night.yml)
     # # Default colors
