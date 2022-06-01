@@ -4,21 +4,20 @@
 * Author: Dawid Kurek (dawikur@gmail.com), morhetz (https://github.com/morhetz/gruvbox)
 *
 */
-@define-color base00 #292d3e;
-@define-color base01 #292d34;
-@define-color base02 #51afef;
-@define-color base03 #52afef;
-@define-color base04 #B8BB26;
-@define-color base06 #BBEEEE;
-@define-color base06 #EDF;
-@define-color base07 #DEF;
-@define-color base08 #FB4934;
-@define-color base09 #FE8019;
+@define-color base00 #2b2b2b;
+@define-color base01 #7b7462;
+@define-color base02 #44848b;
+@define-color base03 #44847e;
+@define-color base04 #dab158;
+@define-color base06 #dab158;
+@define-color base07 #7b7462;
+@define-color base08 #cb241c;
+@define-color base09 #59565d;
 @define-color base0A #FABD2F;
 @define-color base0B #B8BB26;
 @define-color base0C #8EC07C;
 @define-color base0D #83A598;
-@define-color base0E #D3869B;
+@define-color base0E #2b2b2b;
 @define-color base0F #D65D0E;
 
 window {
@@ -58,6 +57,7 @@ window {
 #entry {
 	padding: 0px;
     margin: 0px;
+	color: @base02;
 	background-color: @base00;
 }
 

@@ -5,7 +5,8 @@ lua require('init')
 set runtimepath+=~/.config/nvim/syntax
 
 " Theme
-colorscheme palenight
+set background=dark
+colorscheme gruvbox
 
 autocmd VimEnter * CHADopen
 autocmd VimEnter * COQnow [--shut-up]
@@ -238,7 +239,7 @@ augroup end
 " nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 " nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
+" Search workspace symbols
 " nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 " nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
@@ -249,7 +250,7 @@ augroup end
 
 " add cocstatus into lightline
 let g:lightline = {
-	\ 'colorscheme': 'wombat',
+	\ 'colorscheme': 'gruvbox',
 	\ 'active': {
 	\   'left': [ [ 'mode', 'paste' ],
 	\             [ 'readonly', 'filename', 'modified' ] ]
@@ -262,9 +263,14 @@ let g:lightline = {
 set guifont=MesloLGS\ NF:h14
 let g:neovide_fullscreen = v:true
 let g:neovide_transparency = 0.8
+let g:seiya_auto_enable=1
+
+highlight! EndOfBuffer guibg=bg guifg=bg
+
+" Default value: ['ctermbg']
+let g:seiya_target_groups = ['guibg']
 
 nnoremap <C-n> :CHADopen<CR>
-nnoremap <f12> :FloatermNew zsh<CR>
 " More available functions:
 " NvimTreeOpen
 " NvimTreeClose
