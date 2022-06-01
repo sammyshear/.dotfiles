@@ -41,6 +41,7 @@ xwayland enable
 ### Window config
 # custom
 # Everything else
+gaps outer 15
 gaps inner 10
 
 ### Key bindings
@@ -231,7 +232,7 @@ titlebar_border_thickness 0
 # Colors & background
 #
 # include ~/.cache/wal/colors-sway
-output * background /home/sammyshear/Pictures/wallpapers/wallpaper.png fill
+output * background /home/sammyshear/Pictures/wallpapers/chad.png fill
 # output "*" background /home/nick/Pictures/Wallpapers/photo-1517999179346-a7078f1e40a6.jpeg fill
 #output "*" background /home/nick/Pictures/Wallpapers/wl0fdl62lik41.jpg fill
 #output "*" background /home/nick/Pictures/Wallpapers/5cclxsyhree71.png fill
