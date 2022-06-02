@@ -21,7 +21,7 @@
 @define-color base0F #D65D0E;
 
 window {
-    opacity: 0.9;
+    opacity: 0.98;
     border:  0px;
     border-radius: 10px;
     font-family: monospace;
@@ -51,7 +51,7 @@ window {
 }
 
 #selected {
-	background-color: @base07;
+	background-color: @base0E;
 }
 
 #entry {
