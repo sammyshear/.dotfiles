@@ -155,4 +155,4 @@ zstyle ':completion:*' menu select
 source $(dirname $(gem which colorls))/tab_complete.sh
 autoload -U compinit; compinit
 eval "$(starship init zsh)"
-pfetch
+nerdfetch
