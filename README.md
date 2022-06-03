@@ -4,6 +4,7 @@ I run Pop!_OS for now, but I am planning to make the switch back to arch (which 
 
 #### Installation
 
+I didn't really intend for this to be installed by anyone but me, (hence the hard references to directories), but to install it you can:
 Just clone this repo, choose the branch you want, and then use GNU stow on the folders you want to use the config for and it will symlink it for you.
 
 
