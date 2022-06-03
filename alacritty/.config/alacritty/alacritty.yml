@@ -327,17 +327,21 @@ bell:
 key_bindings:
     - { key: V, mods: Control|Shift, action: Paste }
     - { key: C, mods: Control|Shift, action: Copy }
-    - { key: Q, mods: Control|Shift, chars: "\x06\x78" }
-    - { key: T, mods: Control|Shift, chars: "\x06\x63" }
-    - { key: W, mods: Control|Shift, chars: "\x06\x78" }
+    - { key: Q, mods: Control|Shift, action: Quit }
+    - { key: W, mods: Control|Shift, action: Quit }
+    - { key: D, mods: Control|Shift, chars: "\x17\x76" }
+    - { key: S, mods: Control|Shift, chars: "\x17\x73" }
+      # - { key: Q, mods: Control|Shift, chars: "\x06\x78" }
+      # - { key: T, mods: Control|Shift, chars: "\x06\x63" }
+      # - { key: W, mods: Control|Shift, chars: "\x06\x78" }
     - { key: F11, mods: Control, action: ToggleFullscreen }
-    - { key: D, mods: Control|Shift, chars: "\x06\x76" }
-    - { key: S, mods: Control|Shift, chars: "\x06\x73" }
-    - { key: Tab, mods: Control|Shift, chars: "\x06\x6E" }
-    - { key: P, mods: Control|Shift, chars: "\x17\x76" }
-    - { Key: O, mods: Control|Shift, chars: "\x17\x73" }
-    - { Key: I, mods: Control|Shift, chars: "\x17\x63" }
-    - { Key: U, mods: Control|Shift, chars: "\x17\x6F" }
+      # - { key: D, mods: Control|Shift, chars: "\x06\x76" }
+      # - { key: S, mods: Control|Shift, chars: "\x06\x73" }
+      # - { key: Tab, mods: Control|Shift, chars: "\x06\x6E" }
+      # - { key: P, mods: Control|Shift, chars: "\x17\x76" }
+      # - { key: O, mods: Control|Shift, chars: "\x17\x73" }
+      # - { key: I, mods: Control|Shift, chars: "\x17\x63" }
+      # - { key: U, mods: Control|Shift, chars: "\x17\x6F" }
 mouse:
     # Click settings
     #
@@ -438,7 +442,5 @@ debug:
 # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
 # Entries in shell.args are passed unmodified as arguments to the shell.
 shell:
-    program: /usr/bin/tmux
-    args:
-        - new
+    program: /usr/bin/zsh
 # vim: nospell
