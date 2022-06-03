@@ -61,7 +61,7 @@ tooltip {
 
 
 #battery {
-    color: #44848b;
+    color: #dab168;
     border-radius: 0px 0px 0px 0px;
 }
 
@@ -70,7 +70,7 @@ tooltip {
 }
 
 #battery.warning:not(.charging) {
-    background-color: #dab158;
+    background-color: #cb241c;
     color: #2a2e38;
 }
 
