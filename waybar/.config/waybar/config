@@ -1,9 +1,9 @@
 {
     "position": "top",
-    "height": 30, 
+    "height": 30,
     //"modules-left": ["sway/workspaces"],
     //"modules-right": ["network", "pulseaudio", "battery", "clock"],
-    "modules-center": ["sway/workspaces", "network", "pulseaudio", "battery", "clock"],
+    "modules-center": ["sway/workspaces", "network", "battery", "clock"],
     // Modules configuration
 	"sway/workspaces": {
 		"disable-scroll": true,
@@ -52,7 +52,7 @@
 	},
 	"network": {
         	"format-wifi": "  {essid}",
-        	"format-ethernet": "󰤮 Disconnected",
+        	"format-ethernet": " Ethernet",
         	"format-linked": "{ifname} (No IP) ",
         	"format-disconnected": "󰤮 Disconnected",
 		"tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
