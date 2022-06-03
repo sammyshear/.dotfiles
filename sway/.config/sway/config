@@ -232,8 +232,12 @@ titlebar_border_thickness 0
 # Colors & background
 #
 # include ~/.cache/wal/colors-sway
-output * background /home/sammyshear/Pictures/wallpapers/walltux.png fill
-# output * background /home/sammyshear/Pictures/wallpapers/wall[blank] fill
+output * background /home/sammyshear/Pictures/wallpapers/wall2.jpg fill
+# output "*" background /home/nick/Pictures/Wallpapers/photo-1517999179346-a7078f1e40a6.jpeg fill
+#output "*" background /home/nick/Pictures/Wallpapers/wl0fdl62lik41.jpg fill
+#output "*" background /home/nick/Pictures/Wallpapers/5cclxsyhree71.png fill
+#output "*" background /home/nick/Pictures/Wallpapers/tumblr_nvolmjO9yb1tff08ro1_1280.jpg fill
+#output "*" background /home/nick/Pictures/Wallpapers/O0mu0E8.jpeg fill
 
 # Outputs for VM
 #output Virtual-1 resolution 1920x1080 position 1920,0
