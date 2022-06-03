@@ -6,7 +6,7 @@ set runtimepath+=~/.config/nvim/syntax
 
 " Theme
 set background=dark
-colorscheme gruvbox
+colorscheme palenight
 
 autocmd VimEnter * CHADopen
 autocmd VimEnter * COQnow [--shut-up]
@@ -253,7 +253,7 @@ augroup end
 
 " add cocstatus into lightline
 let g:lightline = {
-	\ 'colorscheme': 'gruvbox',
+	\ 'colorscheme': 'palenight',
 	\ 'active': {
 	\   'left': [ [ 'mode', 'paste' ],
 	\             [ 'readonly', 'filename', 'modified' ] ]

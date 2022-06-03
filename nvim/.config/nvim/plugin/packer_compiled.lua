@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/home/sammyshear/.local/share/nvim/site/pack/packer/start/glow.nvim",
     url = "https://github.com/ellisonleao/glow.nvim"
   },
-  ["gruvbox.nvim"] = {
-    loaded = true,
-    path = "/home/sammyshear/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
-    url = "https://github.com/ellisonleao/gruvbox.nvim"
-  },
   ["lightline.vim"] = {
     loaded = true,
     path = "/home/sammyshear/.local/share/nvim/site/pack/packer/start/lightline.vim",
@@ -139,6 +134,11 @@ _G.packer_plugins = {
     path = "/home/sammyshear/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["palenight.vim"] = {
+    loaded = true,
+    path = "/home/sammyshear/.local/share/nvim/site/pack/packer/start/palenight.vim",
+    url = "https://github.com/drewtempelmeyer/palenight.vim"
+  },
   rainbow = {
     loaded = true,
     path = "/home/sammyshear/.local/share/nvim/site/pack/packer/start/rainbow",
@@ -148,6 +148,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sammyshear/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
+  },
+  ["seiya.vim"] = {
+    loaded = true,
+    path = "/home/sammyshear/.local/share/nvim/site/pack/packer/start/seiya.vim",
+    url = "https://github.com/miyakogi/seiya.vim"
   },
   syntastic = {
     loaded = true,
