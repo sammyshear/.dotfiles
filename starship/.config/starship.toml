@@ -70,16 +70,23 @@ symbol = " "
 [battery]
 full_symbol = " "
 charging_symbol = " "
-discharging_symbol = "💀 "
+discharging_symbol = " "
 
 [[battery.display]]
 threshold = 10
 style = "bold red"
+discharging_symbol = " "
 
 [[battery.display]]
 threshold = 40
 style = "bold yellow"
+discharging_symbol = " "
+
+[[battery.display]]
+threshold = 99
+style = "bold green"
 
 [[battery.display]]
 threshold = 100
 style = "bold green"
+discharging_symbol = " "
