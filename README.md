@@ -12,6 +12,7 @@ Just clone this repo, choose the branch you want, and then use GNU stow on the f
 
 ![main desktop](https://github.com/sammyshear/.dotfiles/blob/main/.screenshots/desktop.png?raw=true)
 ![main terminal](https://github.com/sammyshear/.dotfiles/blob/main/.screenshots/terminal.png?raw=true)
+![luke desktop](https://github.com/sammyshear/.dotfiles/blob/main/.screenshots/deskop-luke.png?raw=true)
 ![gruvboxie desktop](https://github.com/sammyshear/.dotfiles/blob/main/.screenshots/desktop-gruv.png?raw=true)
 ![gruvboxie terminal](https://github.com/sammyshear/.dotfiles/blob/main/.screenshots/terminal-gruv.png?raw=true)
 
