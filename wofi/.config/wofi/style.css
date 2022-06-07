@@ -7,7 +7,7 @@
 @define-color base00 #000000;
 @define-color base01 #ffffff;
 @define-color base02 #66cccc;
-@define-color base03 #abbcda;
+@define-color base03 #424153;
 @define-color base04 #0099cc;
 @define-color base06 #ffcc33;
 @define-color base07 #ffffff;
@@ -21,7 +21,7 @@
 @define-color base0F #ff9900;
 
 window {
-    opacity: 0.98;
+    opacity: 0.85;
     border:  0px;
     border-radius: 10px;
     font-family: monospace;
@@ -41,29 +41,29 @@ window {
 #inner-box {
 	margin: 0px;
 	color: @base06;
-	background-color: @base01;
+	background-color: @base03;
 }
 
 #outer-box {
 	margin: 0px;
-	background-color: @base01;
+	background-color: @base03;
     border-radius: 10px;
 }
 
 #selected {
-	background-color: @base01;
+	background-color: @base03;
 }
 
 #entry {
 	padding: 0px;
     margin: 0px;
 	color: @base0F;
-	background-color: @base01;
+	background-color: @base03;
 }
 
 #scroll {
 	margin: 5px;
-	background-color: @base01;
+	background-color: @base03;
 }
 
 #text {
