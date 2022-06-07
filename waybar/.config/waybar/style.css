@@ -1,3 +1,19 @@
+@define-color base00 #000000;
+@define-color base01 #ffffff;
+@define-color base02 #66cccc;
+@define-color base03 #424153;
+@define-color base04 #0099cc;
+@define-color base06 #ffcc33;
+@define-color base07 #ffffff;
+@define-color base08 #cb241c;
+@define-color base09 #59565d;
+@define-color base0A #cc6633;
+@define-color base0B #5fad4f;
+@define-color base0C #8EC07C;
+@define-color base0D #83A598;
+@define-color base0E #000000;
+@define-color base0F #ff9900;
+
 * {
     border-radius: 0;
     font-family: JetBrains Mono Nerd Font;
@@ -11,76 +27,76 @@ window#waybar {
 }
 
 tooltip {
-	background: #424153;
+	background: @base03;
 	border-radius: 15px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #424153;
+	border-color: @base03;
 }
 
 #workspaces button {
     padding: 5px 10px;
-    color: #abbcda;
+    color: @base0F;
 }
 
 #workspaces button.focused {
     box-shadow: 5px 2px 2px black;
-    color: #000000;
-    background-color: #0099cc;
+    color: @base00;
+    background-color: @base06;
     border-radius: 15px;
 }
 
 #workspaces button.urgent {
-    color: #424153;
-    background-color: #66cccc;
+    color: @base06;
+    background-color: @base03;
     border-radius: 15px;
 }
 
 #workspaces button:hover {
-	background-color: #0099cc;
+	background-color: @base0D;
 	color: #424153;
 	border-radius: 15px;
 }
 
 #clock, #battery, #pulseaudio, #network, #workspaces {
-	background-color: #424153;
+	background-color: @base03;
 	padding: 5px 5px;
 	margin: 5px 0px;
 }
 #workspaces {
 	margin-left: 10px;
-	background-color: #424153;
+	background-color: @base03;
 	border-radius: 15px 0px 0px 15px;
 }
 
 #clock {
-    color: #66cccc;
+    color: @base0C;
     border-radius: 0px 15px 15px 0px;
     margin-right: 10px;
   }
 
 
 #battery {
-    color: #66cccc;
+    color: @base0C;
     border-radius: 0px 0px 0px 0px;
 }
 
 #battery.charging {
-    color: #0099cc;
+    color: @base0B;
 }
 
 #battery.warning:not(.charging) {
     background-color: red;
-    color: #424153;
+    color: @base0F;
 }
 
 #network {
-	color: #66cccc;
+	color: @base0C;
 	border-radius: 0px 0px 0px 0px;
         margin: 5px 0px;
 }
 
 #pulseaudio {
-	color: #66cccc;
+	color: @base0C;
 }
 

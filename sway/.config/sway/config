@@ -34,9 +34,9 @@ exec swayidle -w \
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Autostart
-exec_always autotiling
 exec_always gnome-keyring-daemon -r -d --components=secrets
 xwayland enable
+exec_always autotiling
 
 ### Window config
 # custom
@@ -232,7 +232,7 @@ titlebar_border_thickness 0
 # Colors & background
 #
 # include ~/.cache/wal/colors-sway
-output * background /home/sammyshear/Pictures/wallpapers/walltux.png fill
+output * background /home/sammyshear/Pictures/wallpapers/starwars.png fill
 # output * background /home/sammyshear/Pictures/wallpapers/wall[blank] fill
 
 # Outputs for VM

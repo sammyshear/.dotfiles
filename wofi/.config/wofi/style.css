@@ -5,20 +5,20 @@
 *
 */
 @define-color base00 #000000;
-@define-color base01 #7b7462;
+@define-color base01 #ffffff;
 @define-color base02 #66cccc;
 @define-color base03 #abbcda;
 @define-color base04 #0099cc;
-@define-color base06 #dab158;
-@define-color base07 #7b7462;
+@define-color base06 #ffcc33;
+@define-color base07 #ffffff;
 @define-color base08 #cb241c;
 @define-color base09 #59565d;
-@define-color base0A #FABD2F;
-@define-color base0B #B8BB26;
+@define-color base0A #cc6633;
+@define-color base0B #5fad4f;
 @define-color base0C #8EC07C;
 @define-color base0D #83A598;
 @define-color base0E #000000;
-@define-color base0F #D65D0E;
+@define-color base0F #ff9900;
 
 window {
     opacity: 0.98;
@@ -34,36 +34,36 @@ window {
     padding: 10px;
     margin: 0px;
     font-size: 28px;
-	color: @base06;
-	background-color: @base04;
+	color: @base0F;
+	background-color: @base0B;
 }
 
 #inner-box {
 	margin: 0px;
 	color: @base06;
-	background-color: @base00;
+	background-color: @base01;
 }
 
 #outer-box {
 	margin: 0px;
-	background-color: @base00;
+	background-color: @base01;
     border-radius: 10px;
 }
 
 #selected {
-	background-color: @base0E;
+	background-color: @base01;
 }
 
 #entry {
 	padding: 0px;
     margin: 0px;
-	color: @base02;
-	background-color: @base00;
+	color: @base0F;
+	background-color: @base01;
 }
 
 #scroll {
 	margin: 5px;
-	background-color: @base00;
+	background-color: @base01;
 }
 
 #text {
