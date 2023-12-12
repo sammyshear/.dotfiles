@@ -1,0 +1,18 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+alacritty = ""
+hypr = ""
+rofi = ""
+starship = ""
+swaylock = ""
+swww = ""
+themes = ""
+tmux = ""
+waybar = ""
+zsh = ""
+
+[default.variables]
