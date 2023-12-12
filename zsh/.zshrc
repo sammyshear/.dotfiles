@@ -1,12 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
-# If you come from bash you might have to change your $PATH.
-export PATH=/home/sammyshear/anaconda3/condabin:/home/sammyshear/.nvm/versions/node/v17.0.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/sammyshear/.yarn/bin:/home/sammyshear/.vim:/home/sammyshear/.local/bin:/home/sammyshear/.cargo/bin:/home/sammyshear/.dotnet/tools:/home/sammyshear/bin:/home/sammyshear/.gem/ruby/1.9.1/bin:/home/sammyshear/.dotnet:/home/sammyshear/.vcpkg/vcpkg:/home/sammyshear/.gvm/gos/go1.18/bin:/home/sammyshear/.local/bin/eww:/home/sammyshear/una
 export EDITOR=nvim
 
 source ~/.zplug/init.zsh
@@ -93,12 +84,7 @@ fi
 # Then, source plugins and add commands to $PATH
 zplug load
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-alias lc="colorls"
 alias vim="nvim"
-#alias ls="lc"
 alias ls="eza --icons"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -106,36 +92,25 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 source /usr/share/nvm/init-nvm.sh
 
-[[ -s "/home/sammyshear/.gvm/scripts/gvm" ]] && source "/home/sammyshear/.gvm/scripts/gvm"
 # Start TMUX first; try to reattach a session
 if [[ -z $TMUX ]]; then
   ATTACH_OPT=$(tmux ls | grep -vq attached && echo "attach -d")
   exec eval "tmux $ATTACH_OPT"
 fi
 
-export DENO_INSTALL="/home/sammyshear/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH=/home/sammyshear/.nimble/bin:$PATH
-export JAVA_HOME=/opt/jdk-18
 export VCPKG_ROOT="/home/sammyshear/.vcpkg/vcpkg"
 export PATH=$PATH:$VCPKG_ROOT
-export PATH=$JAVA_HOME/bin:$PATH
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/home/sammyshear/.emacs.d/bin
 
 GPG_TTY=$(tty)
 export GPG_TTY
 
 export CLICOLOR=1
-export LS_COLORS="$(vivid generate nord)"
+export LS_COLORS="$(vivid generate catppuccin-mocha)"
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' completer _extensions _complete _approximate
 zstyle ':completion:*' menu select
 
-source $(dirname $(gem which colorls))/tab_complete.sh
 autoload -U compinit; compinit
-eval "$(starship init zsh)"
-nerdfetch
 
 # bun completions
 [ -s "/home/sammyshear/.bun/_bun" ] && source "/home/sammyshear/.bun/_bun"
@@ -154,3 +129,6 @@ esac
 
 # Turso
 export PATH="/home/sammyshear/.turso:$PATH"
+
+eval "$(starship init zsh)"
+nerdfetch
