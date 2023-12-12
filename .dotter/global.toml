@@ -14,5 +14,6 @@ themes = "~/.themes"
 tmux = "~/.config/tmux"
 waybar = "~/.config/waybar"
 zsh = "~"
+nvim = "~/.config/nvim"
 
 [default.variables]
