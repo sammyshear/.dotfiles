@@ -4,15 +4,15 @@
 depends = []
 
 [default.files]
-alacritty = ""
-hypr = ""
-rofi = ""
-starship = ""
-swaylock = ""
-swww = ""
-themes = ""
-tmux = ""
-waybar = ""
-zsh = ""
+alacritty = "~/.config/alacritty"
+hypr = "~/.config/hypr"
+rofi = "~/.config/rofi"
+starship = "~/.config"
+swaylock = "~/.config/swaylock"
+swww = "~/.config/swww"
+themes = "~/.themes"
+tmux = "~/.config/tmux"
+waybar = "~/.config/waybar"
+zsh = "~"
 
 [default.variables]
