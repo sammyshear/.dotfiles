@@ -113,14 +113,14 @@ zstyle ':completion:*' menu select
 autoload -U compinit; compinit
 
 # bun completions
-[ -s "/home/sammyshear/.bun/_bun" ] && source "/home/sammyshear/.bun/_bun"
+[ -s "${HOME}.bun/_bun" ] && source "${HOME}/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/home/sammyshear/.local/share/pnpm"
+export PNPM_HOME="${HOME}/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -128,7 +128,7 @@ esac
 # pnpm end
 
 # Turso
-export PATH="/home/sammyshear/.turso:$PATH"
+export PATH="${HOME}/.turso:$PATH"
 
 eval "$(starship init zsh)"
 nerdfetch
