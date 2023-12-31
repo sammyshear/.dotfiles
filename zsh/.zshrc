@@ -85,12 +85,14 @@ fi
 zplug load
 
 alias vim="nvim"
-alias ls="eza --icons"
+alias ls="eza --icons always"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 source /usr/share/nvm/init-nvm.sh
+
+eval "$(pyenv virtualenv-init -)"
 
 # Start TMUX first; try to reattach a session
 if [[ -z $TMUX ]]; then
@@ -129,6 +131,8 @@ esac
 
 # Turso
 export PATH="${HOME}/.turso:$PATH"
+
+export PATH="${HOME}/.cargo/bin":$PATH
 
 eval "$(starship init zsh)"
 nerdfetch

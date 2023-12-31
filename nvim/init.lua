@@ -1,43 +1,3 @@
---[[
-
-=====================================================================
-==================== READ THIS BEFORE CONTINUING ====================
-=====================================================================
-
-Kickstart.nvim is *not* a distribution.
-
-Kickstart.nvim is a template for your own configuration.
-  The goal is that you can read every line of code, top-to-bottom, understand
-  what your configuration is doing, and modify it to suit your needs.
-
-  Once you've done that, you should start exploring, configuring and tinkering to
-  explore Neovim!
-
-  If you don't know anything about Lua, I recommend taking some time to read through
-  a guide. One possible example:
-  - https://learnxinyminutes.com/docs/lua/
-
-
-  And then you can explore or search through `:help lua-guide`
-  - https://neovim.io/doc/user/lua-guide.html
-
-
-Kickstart Guide:
-
-I have left several `:help X` comments throughout the init.lua
-You should run that command and read that help section for more information.
-
-In addition, I have some `NOTE:` items throughout the file.
-These are for you, the reader to help understand what is happening. Feel free to delete
-them once you know what you're doing, but they should serve as a guide for when you
-are first encountering a few different constructs in your nvim config.
-
-I hope you enjoy your Neovim journey,
-- TJ
-
-P.S. You can delete this when you're done too. It's your config now :)
---]]
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -153,7 +113,7 @@ require('lazy').setup({
             -- Window handling
             single_terminal_per_instance = true,  -- Single viewport, multiple windows
             single_terminal_per_tab = true,       -- Single viewport per tab
-            keep_terminal_static_location = true, -- Static location of the viewport if avialable
+            keep_terminal_static_location = true, -- Static location of the viewport if available
 
             -- Running Tasks
             start_insert_in_launch_task = false, -- If you want to enter terminal with :startinsert upon using :CMakeRun
@@ -184,6 +144,30 @@ require('lazy').setup({
         end
       },
       'williamboman/mason-lspconfig.nvim',
+      {
+        'MunifTanjim/prettier.nvim',
+        config = function()
+          local prettier = require("prettier")
+          prettier.setup({
+            bin = 'prettierd', -- or `'prettierd'` (v0.23.3+)
+            filetypes = {
+              "css",
+              "graphql",
+              "html",
+              "javascript",
+              "javascriptreact",
+              "json",
+              "less",
+              "markdown",
+              "scss",
+              "vue",
+              "typescript",
+              "typescriptreact",
+              "yaml",
+            },
+          })
+        end
+      },
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
@@ -307,6 +291,36 @@ require('lazy').setup({
       local nls = require("null-ls")
       opts.sources = opts.sources or {}
       table.insert(opts.sources, nls.builtins.formatting.prettier)
+      local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
+      local event = "BufWritePre" -- or "BufWritePost"
+      local async = event == "BufWritePost"
+
+      nls.setup({
+        on_attach = function(client, bufnr)
+          if client.supports_method("textDocument/formatting") then
+            vim.keymap.set("n", "<Leader>f", function()
+              vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })
+            end, { buffer = bufnr, desc = "[lsp] format" })
+
+            -- format on save
+            vim.api.nvim_clear_autocmds({ buffer = bufnr, group = group })
+            vim.api.nvim_create_autocmd(event, {
+              buffer = bufnr,
+              group = group,
+              callback = function()
+                vim.lsp.buf.format({ bufnr = bufnr, async = async })
+              end,
+              desc = "[lsp] format on save",
+            })
+          end
+
+          if client.supports_method("textDocument/rangeFormatting") then
+            vim.keymap.set("x", "<Leader>f", function()
+              vim.lsp.buf.format({ bufnr = vim.api.nvim_get_current_buf() })
+            end, { buffer = bufnr, desc = "[lsp] format" })
+          end
+        end,
+      })
     end,
   },
   {
@@ -669,6 +683,20 @@ local servers = {
       "--header-insertion=iwyu"
     }
   },
+  rust_analyzer = {
+--    ["rust-analyzer"] = {
+--      cargo = {
+--        features = { "ssr" },
+--        loadOutDirsFromCheck = true,
+--        buildScripts = {
+--          enable = true,
+--        }
+--      },
+--      check = {
+--        features = { "ssr" },
+--      },
+--    }
+  },
   -- gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
@@ -759,6 +787,12 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+vim.filetype.add({
+    extension = {
+        astro = "astro"
+    }
+})
 
 if vim.g.neovide then
   vim.o.guifont = "FiraCode NF:h14"
