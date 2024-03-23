@@ -102,6 +102,7 @@ fi
 
 export VCPKG_ROOT="/home/sammyshear/.vcpkg/vcpkg"
 export PATH=$PATH:$VCPKG_ROOT
+export PATH=$PATH:"/home/sammyshear/.luarocks/bin"
 
 GPG_TTY=$(tty)
 export GPG_TTY
@@ -133,6 +134,22 @@ esac
 export PATH="${HOME}/.turso:$PATH"
 
 export PATH="${HOME}/.cargo/bin":$PATH
+export PATH="${HOME}/go/bin":$PATH
+
+export FPCDIR='/usr/lib/fpc/src'      # FPC source directory (This is the only required option for the server to work).
+export PP='/usr/lib/fpc/3.2.2/ppcx64' # Path to the Free Pascal compiler executable.
+export LAZARUSDIR='/usr/lib/lazarus'  # Path to the Lazarus sources.
+export FPCTARGET=''                   # Target operating system for cross compiling.
+export FPCTARGETCPU='x86_64'          # Target CPU for cross compiling.
 
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+alias cd="z"
+alias cdi="zi"
 nerdfetch
+
+export ORX="/home/sammyshear/Coding/C/orx/code"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
