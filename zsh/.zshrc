@@ -92,8 +92,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 source /usr/share/nvm/init-nvm.sh
 
-eval "$(pyenv virtualenv-init -)"
-
 # Start TMUX first; try to reattach a session
 if [[ -z $TMUX ]]; then
   ATTACH_OPT=$(tmux ls | grep -vq attached && echo "attach -d")

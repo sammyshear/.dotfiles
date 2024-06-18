@@ -7,6 +7,5 @@ export FLYCTL_INSTALL="/home/sammyshear/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-source "/home/sammyshear/emsdk/emsdk_env.sh"
 
 export ORX="/home/sammyshear/Coding/C/orx/code"
