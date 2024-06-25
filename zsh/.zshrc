@@ -140,13 +140,16 @@ export LAZARUSDIR='/usr/lib/lazarus'  # Path to the Lazarus sources.
 export FPCTARGET=''                   # Target operating system for cross compiling.
 export FPCTARGETCPU='x86_64'          # Target CPU for cross compiling.
 
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY
+
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 alias cd="z"
 alias cdi="zi"
 nerdfetch
-
-export ORX="/home/sammyshear/Coding/C/orx/code"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
